@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { classes }  from '@henrik_t/bootstrap-theme'
+import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
+import '@henrik_t/bootstrap-theme/dist/styles/index.css'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Card className={classes.card}>
+            <Card.Header>Featured</Card.Header>
+            <Card.Body>
+                <Card.Title>Special title treatment</Card.Title>
+                <Card.Text>
+                With supporting text below as a natural lead-in to additional content.
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+            <Card.Footer className="text-muted">2 days ago</Card.Footer>
+        </Card>
+    )
 }
 
 export default App;

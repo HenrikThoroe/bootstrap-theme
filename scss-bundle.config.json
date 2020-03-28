@@ -1,0 +1,8 @@
+{
+    "bundlerOptions": {
+        "rootDir": "./src/styles",
+        
+        "outFile": "./src/styles/bundle.scss"
+
+    }
+}

@@ -1,11 +1,12 @@
 const path = require("path")
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const extractCSS = new ExtractTextPlugin('styles.css');
+const extractCSS = new ExtractTextPlugin('./styles/index.css');
 
 module.exports = {
     mode: "production",
-    entry: "./src/index.ts",
+    entry: "./src/styles/exports.scss",
+    devtool: 'inline-source-map',
     module: {
         rules: [
             {
@@ -15,12 +16,6 @@ module.exports = {
                     'sass-loader',
                     'postcss-loader'
                 ])
-            }, 
-            {
-                test: /\.ts/i,
-                use: [
-                    "ts-loader"
-                ]
             }
         ]
     },
@@ -28,7 +23,7 @@ module.exports = {
         extractCSS
     ],
     resolve: {
-        extensions: [ '.scss', '.sass', '.css', '.js', '.ts', '.json' ],
+        extensions: [ '.scss', '.sass', '.css' ],
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
