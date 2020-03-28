@@ -1,7 +1,7 @@
 import './styles/index.scss'
 
 const classes = {
-    app: ".app"
+    card: ".bt_card"
 }
 
 export default classes

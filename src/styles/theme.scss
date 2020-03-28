@@ -1,0 +1,7 @@
+@import "index";
+
+$dark-mode: false;
+
+@media (prefers-color-scheme: dark) {
+    $dark-mode: true;
+}
